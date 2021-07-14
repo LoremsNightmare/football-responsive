@@ -32,6 +32,48 @@ header {
   width: 556.01px;
 }
 
+/* animation btn */
+.button {
+  border-radius: 4px;
+  background-color: #e02c6d;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 19px;
+  padding: 1px;
+  height: 44px;
+
+  width: 168px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\279c";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 /* responsive Header */
 @media only screen and (max-width: 600px) {
   header {
@@ -117,7 +159,6 @@ main {
   text-align: center;
 }
 
-/* Footer style */
 footer {
   margin: 158px 0 68px;
 }
@@ -188,6 +229,7 @@ article {
   padding-left: 4rem;
 }
 
+/* sponsor responsive */
 @media only screen and (max-width: 600px) {
   .sponsorFive {
     width: 360px;
@@ -229,15 +271,4 @@ iframe {
     height: 70vh;
     width: 70vw;
   }
-}
-
-/* button */
-.myBtn {
-  width: 168px;
-  height: 44px;
-  background: #e02c6d;
-  padding: 10px 24px;
-  color: white;
-  border: 0;
-  cursor: pointer;
 }
